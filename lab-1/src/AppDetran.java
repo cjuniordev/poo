@@ -3,11 +3,12 @@ public class AppDetran
     public static void main(String[] args)
     {
         Carro carro = new Carro();
-        carro.modelo = "Uno";
-        Proprietario proprietario = new Proprietario();
-        proprietario.nome = "Carlos";
-        proprietario.meuCarro = carro;
+        carro.setModelo("Uno");
 
-        System.out.println(proprietario.nome + " tem um " + proprietario.meuCarro.modelo);
+        Proprietario proprietario = new Proprietario();
+        proprietario.setNome("Carlos");
+        proprietario.setMeuCarro(carro);
+
+        System.out.println(proprietario.getNome() + " tem um " + proprietario.getMeuCarro().getModelo());
     }
 }
