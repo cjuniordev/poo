@@ -1,4 +1,4 @@
-public class Lutador extends Combatente
+public class Lutador extends Combatente implements Judo
 {
     public Lutador(String nome)
     {
@@ -20,8 +20,17 @@ public class Lutador extends Combatente
         return this.ataqueBase + forcaChute;
     }
 
+    @Override
+    public double UchiMata() {
+        return 60;
+    }
+
     private double decideAtaque()
     {
+        if (Math.random() >= 0.2) {
+            return this.UchiMata();
+        }
+
         boolean atacaComSoco = Math.random() >= 0.6;
 
         if (atacaComSoco) {
